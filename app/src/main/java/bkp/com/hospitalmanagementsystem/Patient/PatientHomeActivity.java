@@ -30,7 +30,7 @@ public class PatientHomeActivity extends AppCompatActivity {
         viewProfileTxt = findViewById(R.id.view_profile_patient);
         logoutPatientBtn = findViewById(R.id.logout_patient);
 
-//        namePatientTxt.setText("Welcome " + PrevalentPatient.currentOnlinePatient.getName());
+        namePatientTxt.setText("Welcome " + PrevalentPatient.currentOnlinePatient.getName());
 
         newAppointmentTxt.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -99,7 +99,7 @@ public class NewAppointmentPatientActivity extends AppCompatActivity {
         dataRef = FirebaseDatabase.getInstance().getReference();
 
         HashMap<String, Object> mp = new HashMap<>();
-        mp.put("id",x+"");
+        mp.put("aid",x+"");
         mp.put("name",name);
         mp.put("fname",fname);
         mp.put("age",age);
@@ -108,7 +108,10 @@ public class NewAppointmentPatientActivity extends AppCompatActivity {
         mp.put("problem",problem);
         mp.put("notes",note);
 
-        mp.put("status","waiting");
+        mp.put("status","new");
+        mp.put("department","n/a");
+        mp.put("ward","n/a");
+        mp.put("floor","n/a");
 
         dataRef.child("Appointment").child(String.valueOf(x)).updateChildren(mp).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

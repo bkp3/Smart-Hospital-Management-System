@@ -24,6 +24,7 @@
             android:textSize="30dp"
             android:textStyle="bold"
             android:gravity="center"
+            android:layout_marginBottom="20dp"
             android:textColor="@android:color/holo_orange_light"
             />
 
@@ -175,42 +176,6 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/clinic_ll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#c7ffd6"
-                android:elevation="10dp"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:layout_below="@+id/receptionist_ll"
-                >
-                <LinearLayout
-                    android:id="@+id/clinic_llh"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_margin="1dp"
-                    android:layout_gravity="center_horizontal"
-                    android:padding="5dp"
-                    android:elevation="5dp">
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/clinic"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Clinic"
-                        android:layout_gravity="center"
-                        android:textSize="30dp"
-                        android:layout_marginLeft="20dp"
-                        android:textColor="@android:color/holo_red_dark"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/aboutus_ll"
@@ -221,7 +186,7 @@
                 android:layout_margin="10dp"
                 android:background="#c7ffd6"
                 android:padding="10dp"
-                android:layout_below="@+id/clinic_ll"
+                android:layout_below="@+id/receptionist_ll"
                 >
                 <LinearLayout
                     android:id="@+id/aboutus_llh"

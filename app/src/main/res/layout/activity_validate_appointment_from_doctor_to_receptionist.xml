@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="15dp"
+    tools:context=".Doctor.ValidateAppointmentFromDoctorToReceptionistActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/vafdtr_aid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment ID :- "
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:id="@+id/vafdtr_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_aid"
+            android:text="Name :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/vafdtr_problems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_name"
+            android:text="Problems :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/vafdtr_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_problems"
+            android:text="Notes :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/vafdtr_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_notes"
+            android:text="Status :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:id="@+id/vafdtr_medicine_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_status"
+            android:text="Write Medicine :- "
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <EditText
+            android:id="@+id/vafdtr_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_medicine_display"
+            android:hint="Medicine......"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/vafdtr_precaution_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_medicine"
+            android:text="Write Precautions :- "
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorAccent"
+            />
+        <EditText
+            android:id="@+id/vafdtr_precaution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_precaution_display"
+            android:hint="Precaution......"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            />
+
+        <Button
+            android:id="@+id/vafdtr_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vafdtr_precaution"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/holo_green_dark"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

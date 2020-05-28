@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Patient.ViewAppointmentPatientActivity">
+    tools:context=".Doctor.ViewAppointmentDoctorActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,12 +17,11 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu_patient"
+        android:id="@+id/recycler_menu_doctor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         android:layout_marginTop="50dp">
     </androidx.recyclerview.widget.RecyclerView>
-
 
 </RelativeLayout>

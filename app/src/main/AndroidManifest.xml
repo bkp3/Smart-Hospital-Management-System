@@ -9,7 +9,16 @@
         android:roundIcon="@drawable/poster"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Receptionist.ReceptionistHomeActivity"></activity>
+        <activity android:name=".Receptionist.PaymentReceptionistActivity"></activity>
+        <activity android:name=".Doctor.EditPrescriptionDoctorActivity" />
+        <activity android:name=".Doctor.ViewPrescriptionDoctorActivity" />
+        <activity android:name=".Receptionist.ViewPrescriptionReceptionistActivity" />
+        <activity android:name=".Patient.EditAppointmentPatient" />
+        <activity android:name=".Doctor.ValidateAppointmentFromDoctorToReceptionistActivity" />
+        <activity android:name=".Doctor.ViewAppointmentDoctorActivity" />
+        <activity android:name=".Receptionist.ValidateAppointmentFromReceptionistToDoctorActivity" />
+        <activity android:name=".Receptionist.ViewAppointmentReceptionistActivity" />
+        <activity android:name=".Receptionist.ReceptionistHomeActivity" />
         <activity android:name=".Admin.ManageReceptionist.AdminAddReceptionistActivity" />
         <activity android:name=".Admin.ManageReceptionist.AdminManageReceptionistActivity" />
         <activity android:name=".Patient.ViewAppointmentPatientActivity" />

@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Patient.ViewAppointmentPatientActivity">
+    tools:context=".Doctor.ViewPrescriptionDoctorActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="List Of Appointment"
+        android:text="List Of Prescription"
         android:gravity="center"
         android:textSize="25dp"
         android:textColor="@android:color/holo_orange_dark"
@@ -17,7 +17,7 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu_patient"
+        android:id="@+id/recycler_menu_doctor_prescription"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"

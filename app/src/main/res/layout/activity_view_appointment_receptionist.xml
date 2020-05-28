@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Patient.ViewAppointmentPatientActivity">
+    tools:context=".Receptionist.ViewAppointmentReceptionistActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,9 +15,9 @@
         android:textColor="@android:color/holo_orange_dark"
         android:textStyle="bold"
         />
-
+    
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu_patient"
+        android:id="@+id/recycler_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"

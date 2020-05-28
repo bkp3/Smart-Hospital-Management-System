@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    app:cardElevation="15dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/appointment_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment ID :- "
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/appointment_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_id"
+            android:text="Name :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/appointment_fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_name"
+            android:text="Father Name :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/appointment_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_fname"
+            android:text="Age :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/appointment_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_age"
+            android:text="Gender :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/appointment_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_gender"
+            android:text="Phone :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/appointment_problems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_phone"
+            android:text="Problems :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/appointment_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_problems"
+            android:text="Notes :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:id="@+id/appointment_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_notes"
+            android:text="Status :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@android:color/holo_green_dark"
+            />
+        <TextView
+            android:id="@+id/appointment_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_status"
+            android:text="Department :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@android:color/holo_green_dark"
+            />
+        <TextView
+            android:id="@+id/appointment_ward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_department"
+            android:text="Ward :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@android:color/holo_green_dark"
+            />
+        <TextView
+            android:id="@+id/appointment_floor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointment_ward"
+            android:text="Floor :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@android:color/holo_green_dark"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

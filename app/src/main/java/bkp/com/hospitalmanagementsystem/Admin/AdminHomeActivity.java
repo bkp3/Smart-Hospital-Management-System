@@ -31,8 +31,6 @@ public class AdminHomeActivity extends AppCompatActivity {
 
         doctorTxt = findViewById(R.id.manage_doctor_admin);
         receptionistTxt = findViewById(R.id.manage_receptionist_admin);
-        cashierTxt = findViewById(R.id.manage_cashier_admin);
-        pharmacyTxt = findViewById(R.id.pharmacy_medical_admin);
         logoutBtn = findViewById(R.id.admin_logout);
 
         doctorTxt.setOnClickListener(new View.OnClickListener() {

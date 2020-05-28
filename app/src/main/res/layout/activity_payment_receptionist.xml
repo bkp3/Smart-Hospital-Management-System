@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="15dp"
+    tools:context=".Receptionist.PaymentReceptionistActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pr_aid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment ID :- "
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/pr_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status :- "
+            android:textSize="16dp"
+            android:layout_below="@+id/pr_aid"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:id="@+id/pr_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medicine :- "
+            android:textSize="16dp"
+            android:layout_below="@+id/pr_status"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:id="@+id/pr_precautions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precautions :- "
+            android:textSize="16dp"
+            android:layout_below="@+id/pr_medicine"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            />
+
+        <EditText
+            android:id="@+id/pr_medicine_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pr_precautions"
+            android:textColorHint="@color/colorPrimary"
+            android:hint="Medicine Rates :- "
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <EditText
+            android:id="@+id/pr_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pr_medicine_list"
+            android:textColorHint="@color/colorPrimary"
+            android:hint="Bill :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+
+        <Button
+            android:id="@+id/pr_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pr_bill"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:padding="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/holo_green_dark"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -3,7 +3,6 @@ package bkp.com.hospitalmanagementsystem;
 import androidx.appcompat.app.AppCompatActivity;
 import bkp.com.hospitalmanagementsystem.Aboutus.AboutusRegistrationActivity;
 import bkp.com.hospitalmanagementsystem.Admin.AdminLoginActivity;
-import bkp.com.hospitalmanagementsystem.Clinic.ClinicRegistrationActivity;
 import bkp.com.hospitalmanagementsystem.Doctor.DoctorLoginActivity;
 import bkp.com.hospitalmanagementsystem.Patient.PatientRegistrationActivity;
 import bkp.com.hospitalmanagementsystem.Receptionist.ReceptionistLoginActivity;
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         doctor = findViewById(R.id.doctor_llh);
         patient = findViewById(R.id.patient_llh);
         receptionist = findViewById(R.id.receptionist_llh);
-        clinic = findViewById(R.id.clinic_llh);
+
         aboutus = findViewById(R.id.aboutus_llh);
 
         admin.setOnClickListener(new View.OnClickListener() {
@@ -65,14 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        clinic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ClinicRegistrationActivity.class);
-                startActivity(intent);
 
-            }
-        });
 
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override

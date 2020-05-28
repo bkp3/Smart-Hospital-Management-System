@@ -1,10 +1,9 @@
-package bkp.com.hospitalmanagementsystem.Patient;
+package bkp.com.hospitalmanagementsystem.Doctor;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import bkp.com.hospitalmanagementsystem.PrevalentPatient.PrevalentPatient;
 import bkp.com.hospitalmanagementsystem.R;
 import bkp.com.hospitalmanagementsystem.Receptionist.ValidateAppointmentFromReceptionistToDoctorActivity;
 import bkp.com.hospitalmanagementsystem.Receptionist.ViewAppointmentReceptionistActivity;
@@ -23,7 +22,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class ViewAppointmentPatientActivity extends AppCompatActivity {
+public class ViewAppointmentDoctorActivity extends AppCompatActivity {
 
     private DatabaseReference AppointmentsRef;
     private RecyclerView recyclerView;
@@ -32,17 +31,16 @@ public class ViewAppointmentPatientActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_appointment_patient);
+        setContentView(R.layout.activity_view_appointment_doctor);
 
         Paper.init(this);
 
         AppointmentsRef = FirebaseDatabase.getInstance().getReference().child("Appointment");
 
-        recyclerView = findViewById(R.id.recycler_menu_patient);
+        recyclerView = findViewById(R.id.recycler_menu_doctor);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
 
     }
 
@@ -50,43 +48,34 @@ public class ViewAppointmentPatientActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-
-
-
         FirebaseRecyclerOptions<Appointments>options = new FirebaseRecyclerOptions.Builder<Appointments>().setQuery(AppointmentsRef,Appointments.class).build();
         FirebaseRecyclerAdapter<Appointments, AppointmentViewHolder> adapter = new FirebaseRecyclerAdapter<Appointments, AppointmentViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull AppointmentViewHolder holder, int position, @NonNull final Appointments model) {
 
-                if((PrevalentPatient.currentOnlinePatient.getMobile()).equals(model.getPhone()) && (model.getStatus()).equals("new")){
-                    holder.txtAid.setText("Appointment ID :- " + model.getAid());
-                    holder.txtName.setText("Name :- " + model.getName());
-                    holder.txtFname.setText("Father Name :- " + model.getFname());
-                    holder.txtAge.setText("Age :- " + model.getAge());
-                    holder.txtGender.setText("Gender :- " + model.getGender());
-                    holder.txtPhone.setText("Phone :- " + model.getPhone());
-                    holder.txtProblems.setText("Problems :- " + model.getProblem());
-                    holder.txtNotes.setText("Notes :- " + model.getNotes());
-                    holder.txtStatus.setText("Status :- " + model.getStatus());
-                    holder.txtDepartment.setText("Department :- " + model.getDepartment());
-                    holder.txtWard.setText("Ward Number :- " + model.getWard());
-                    holder.txtFloor.setText("Floor Number :- " + model.getFloor());
+                holder.txtAid.setText("Appointment ID :- " + model.getAid());
+                holder.txtName.setText("Name :- " + model.getName());
+                holder.txtFname.setText("Father Name :- " + model.getFname());
+                holder.txtAge.setText("Age :- " + model.getAge());
+                holder.txtGender.setText("Gender :- " + model.getGender());
+                holder.txtPhone.setText("Phone :- " + model.getPhone());
+                holder.txtProblems.setText("Problems :- " + model.getProblem());
+                holder.txtNotes.setText("Notes :- " + model.getNotes());
+                holder.txtStatus.setText("Status :- " + model.getStatus());
+                holder.txtDepartment.setText("Department :- " + model.getDepartment());
+                holder.txtWard.setText("Ward Number :- " + model.getWard());
+                holder.txtFloor.setText("Floor Number :- " + model.getFloor());
 
-                    holder.itemView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                            Intent intent = new Intent(ViewAppointmentPatientActivity.this, EditAppointmentPatient.class);
-                            intent.putExtra("aid",model.getAid());
-                            startActivity(intent);
+                        Intent intent = new Intent(ViewAppointmentDoctorActivity.this, ValidateAppointmentFromDoctorToReceptionistActivity.class);
+                        intent.putExtra("aid",model.getAid());
+                        startActivity(intent);
 
-                        }
-                    });
-                }
-
-                
-
-
+                    }
+                });
 
 
 
@@ -103,8 +92,6 @@ public class ViewAppointmentPatientActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
         adapter.startListening();
-
-
 
 
 
