@@ -139,7 +139,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/cashier_ll"
+                android:id="@+id/receptionist_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -150,7 +150,7 @@
                 android:layout_below="@+id/patient_ll"
                 >
                 <LinearLayout
-                    android:id="@+id/cashier_llh"
+                    android:id="@+id/receptionist_llh"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -165,7 +165,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cashier"
+                        android:text="Receptionist"
                         android:layout_gravity="center"
                         android:textSize="30dp"
                         android:layout_marginLeft="20dp"
@@ -184,7 +184,7 @@
                 android:elevation="10dp"
                 android:layout_margin="10dp"
                 android:padding="10dp"
-                android:layout_below="@+id/cashier_ll"
+                android:layout_below="@+id/receptionist_ll"
                 >
                 <LinearLayout
                     android:id="@+id/clinic_llh"

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient.PatientLoginActivity">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:elevation="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Patient Login"
+            android:textSize="30dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/mobile_number_patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile no.."
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/password_patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password..."
+            android:inputType="textPassword"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"/>
+        <Button
+            android:id="@+id/login_patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Login"
+            android:textSize="25dp"
+            android:background="@android:color/holo_orange_light"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/new_user_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New user? Click here"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:layout_below="@+id/ll"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/forgot_password_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password? Click here"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+</RelativeLayout>

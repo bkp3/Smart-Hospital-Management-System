@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "443083162999",
+    "firebase_url": "https://hospitalmanagementsystem-13850.firebaseio.com",
+    "project_id": "hospitalmanagementsystem-13850",
+    "storage_bucket": "hospitalmanagementsystem-13850.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443083162999:android:8c23d59e826e14e3f60d72",
+        "android_client_info": {
+          "package_name": "bkp.com.hospitalmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443083162999-rkfasavucb3r8l6bs642msdthn7rdqmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuQSrEqYv1-Ac6n98k1PE3_qDSIHMFSDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443083162999-rkfasavucb3r8l6bs642msdthn7rdqmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

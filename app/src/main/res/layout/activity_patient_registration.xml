@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient.PatientRegistrationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Registration"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_dark"/>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/patient_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="20dp"
+            android:layout_marginTop="7dp"
+            />
+        <EditText
+            android:id="@+id/patient_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile no"
+            android:textSize="20dp"
+            android:layout_marginTop="7dp"
+            />
+
+        <EditText
+            android:id="@+id/patient_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email id"
+            android:textSize="20dp"
+            android:layout_marginTop="7dp"
+            />
+        <EditText
+            android:id="@+id/patient_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="20dp"
+            android:layout_marginTop="7dp"
+            />
+
+        <Button
+            android:id="@+id/create_account_patient_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            android:layout_marginTop="47dp"
+            android:background="@android:color/holo_blue_dark"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/already_account_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already Account? Click here"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:layout_below="@+id/ll2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+</RelativeLayout>

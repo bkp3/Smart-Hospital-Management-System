@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Patient.NewAppointmentPatientActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Appointment"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"/>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/patient_id_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:textSize="20dp"
+            android:editable="false"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:id="@+id/patient_name_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            />
+        <EditText
+            android:id="@+id/patient_father_name_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Father name"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            />
+        <EditText
+            android:id="@+id/patient_age_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            />
+        <EditText
+            android:id="@+id/patient_gender_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            />
+
+        <EditText
+            android:id="@+id/patient_problem_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please state problems"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            />
+        <EditText
+            android:id="@+id/patient_notes_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Other notes"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            />
+        <Button
+            android:id="@+id/patient_complaint_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_blue_dark"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

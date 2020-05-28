@@ -4,11 +4,28 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/poster"
+        android:label="Smart Care"
+        android:roundIcon="@drawable/poster"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Receptionist.ReceptionistHomeActivity"></activity>
+        <activity android:name=".Admin.ManageReceptionist.AdminAddReceptionistActivity" />
+        <activity android:name=".Admin.ManageReceptionist.AdminManageReceptionistActivity" />
+        <activity android:name=".Patient.ViewAppointmentPatientActivity" />
+        <activity android:name=".Patient.NewAppointmentPatientActivity" />
+        <activity android:name=".Patient.PatientHomeActivity" />
+        <activity android:name=".Patient.PatientLoginActivity" />
+        <activity android:name=".Doctor.DoctorHomeActivity" />
+        <activity android:name=".Admin.ManageDoctor.AdminAddDoctorActivity" />
+        <activity android:name=".Admin.ManageDoctor.AdminManageDoctorActivity" />
+        <activity android:name=".Admin.AdminHomeActivity" />
+        <activity android:name=".Aboutus.AboutusRegistrationActivity" />
+        <activity android:name=".Clinic.ClinicRegistrationActivity" />
+        <activity android:name=".Receptionist.ReceptionistLoginActivity" />
+        <activity android:name=".Patient.PatientRegistrationActivity" />
+        <activity android:name=".Doctor.DoctorLoginActivity" />
+        <activity android:name=".Admin.AdminLoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
