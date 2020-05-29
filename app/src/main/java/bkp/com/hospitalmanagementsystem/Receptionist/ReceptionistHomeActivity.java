@@ -51,6 +51,13 @@ public class ReceptionistHomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        viewBillTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReceptionistHomeActivity.this, ViewBillReceptionistActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

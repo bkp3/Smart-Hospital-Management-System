@@ -2,8 +2,6 @@ package bkp.com.hospitalmanagementsystem.Receptionist;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import bkp.com.hospitalmanagementsystem.Doctor.DoctorHomeActivity;
-import bkp.com.hospitalmanagementsystem.Doctor.EditPrescriptionDoctorActivity;
 import bkp.com.hospitalmanagementsystem.R;
 
 import android.content.Intent;
@@ -25,30 +23,28 @@ import com.google.firebase.database.ValueEventListener;
 import java.sql.Ref;
 import java.util.HashMap;
 
-public class PaymentReceptionistActivity extends AppCompatActivity {
+public class EditBillReceptionistActivity extends AppCompatActivity {
 
-    private TextView txtAid, txtStatus, txtMedicine, txtPrecautions;
+    private TextView txtAid, txtStatus;
     private EditText edtMedicineRates, edtBill;
     private Button submitBtn;
 
     private String appointmentID = "";
-    private DatabaseReference prescriptionsRef;
+    private DatabaseReference BillRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment_receptionist);
+        setContentView(R.layout.activity_edit_bill_receptionist);
 
         appointmentID = getIntent().getStringExtra("aid");
-        prescriptionsRef = FirebaseDatabase.getInstance().getReference().child("Prescription").child(appointmentID);
+        BillRef = FirebaseDatabase.getInstance().getReference().child("Bill").child(appointmentID);
 
-        txtAid = findViewById(R.id.pr_aid);
-        txtStatus = findViewById(R.id.pr_status);
-        txtMedicine = findViewById(R.id.pr_medicine);
-        txtPrecautions = findViewById(R.id.pr_precautions);
-        edtBill = findViewById(R.id.pr_bill);
-        edtMedicineRates = findViewById(R.id.pr_medicine_list);
-        submitBtn = findViewById(R.id.pr_submit);
+        txtAid = findViewById(R.id.ebr_aid);
+        txtStatus = findViewById(R.id.ebr_status);
+        edtBill = findViewById(R.id.ebr_bill);
+        edtMedicineRates = findViewById(R.id.ebr_medicinerates);
+        submitBtn = findViewById(R.id.ebr_submit);
 
         displaySpecificAppointmentInfo();
 
@@ -91,8 +87,8 @@ public class PaymentReceptionistActivity extends AppCompatActivity {
                         FirebaseDatabase.getInstance().getReference().child("Appointment").child(appointmentID).child("status").setValue("success");
                         FirebaseDatabase.getInstance().getReference().child("Prescription").child(appointmentID).child("status").setValue("success");
 
-                        Toast.makeText(PaymentReceptionistActivity.this, "Payment successfully.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(PaymentReceptionistActivity.this, ReceptionistHomeActivity.class);
+                        Toast.makeText(EditBillReceptionistActivity.this, "update payment successfully.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(EditBillReceptionistActivity.this, ReceptionistHomeActivity.class);
                         startActivity(intent);
                         finish();
 
@@ -103,11 +99,12 @@ public class PaymentReceptionistActivity extends AppCompatActivity {
 
         }
 
+
     }
 
     private void displaySpecificAppointmentInfo() {
 
-        prescriptionsRef.addValueEventListener(new ValueEventListener() {
+        BillRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -115,14 +112,14 @@ public class PaymentReceptionistActivity extends AppCompatActivity {
 
                     String aAid = dataSnapshot.child("aid").getValue().toString();
                     String aStatus = dataSnapshot.child("status").getValue().toString();
-                    String aMedicine = dataSnapshot.child("medicine").getValue().toString();
-                    String aPrecautions = dataSnapshot.child("precautions").getValue().toString();
+                    String aMedicineRates = dataSnapshot.child("medicinerates").getValue().toString();
+                    String aBill = dataSnapshot.child("bill").getValue().toString();
 
 
                     txtAid.setText("Appointment ID :- " + aAid);
                     txtStatus.setText("Status :- " + aStatus);
-                    txtMedicine.setText(aMedicine);
-                    txtPrecautions.setText(aPrecautions);
+                    edtMedicineRates.setText(aMedicineRates);
+                    edtBill.setText(aBill);
 
                 }
 

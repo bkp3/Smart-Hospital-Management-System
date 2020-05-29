@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bill_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment ID :- "
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/bill_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bill_id"
+            android:text="Status :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/bill_medicinerates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bill_status"
+            android:text="Medicine Rates:- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/bill_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bill_medicinerates"
+            android:text="Bill :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

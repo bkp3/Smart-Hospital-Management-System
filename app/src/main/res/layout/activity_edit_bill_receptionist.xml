@@ -9,14 +9,14 @@
     android:layout_marginEnd="15dp"
     android:layout_marginBottom="10dp"
     app:cardElevation="15dp"
-    tools:context=".Receptionist.PaymentReceptionistActivity">
+    tools:context=".Receptionist.EditBillReceptionistActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/pr_aid"
+            android:id="@+id/ebr_aid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Appointment ID :- "
@@ -26,53 +26,56 @@
             />
 
         <TextView
-            android:id="@+id/pr_status"
+            android:id="@+id/ebr_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Status :- "
             android:textSize="16dp"
-            android:layout_below="@+id/pr_aid"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="5dp"
-            />
-        <TextView
-            android:id="@+id/pr_medicine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Medicine :- "
-            android:textSize="16dp"
-            android:layout_below="@+id/pr_status"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginLeft="5dp"
-            />
-        <TextView
-            android:id="@+id/pr_precautions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Precautions :- "
-            android:textSize="16dp"
-            android:layout_below="@+id/pr_medicine"
+            android:layout_below="@+id/ebr_aid"
             android:textColor="@color/colorPrimaryDark"
             android:layout_marginLeft="5dp"
             />
 
-        <EditText
-            android:id="@+id/pr_medicine_list"
+        <TextView
+            android:id="@+id/ebr_medicinerates_display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/pr_precautions"
-            android:textColorHint="@color/colorPrimary"
-            android:hint="Medicine Rates :- "
+            android:layout_below="@+id/ebr_status"
+            android:text="Write Medicine Rates:- "
             android:textSize="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent"
             />
+
         <EditText
-            android:id="@+id/pr_bill"
+            android:id="@+id/ebr_medicinerates"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/pr_medicine_list"
+            android:layout_below="@+id/ebr_medicinerates_display"
+            android:textColorHint="@color/colorPrimary"
+            android:hint="Medicine Rates :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/ebr_bill_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ebr_medicinerates"
+            android:text="Write Bill :- "
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorAccent"
+            />
+        <EditText
+            android:id="@+id/ebr_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ebr_bill_display"
             android:textColorHint="@color/colorPrimary"
             android:hint="Bill :- "
             android:textSize="16dp"
@@ -83,11 +86,11 @@
 
 
         <Button
-            android:id="@+id/pr_submit"
+            android:id="@+id/ebr_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/pr_bill"
-            android:text="Submit"
+            android:layout_below="@+id/ebr_bill"
+            android:text="Update"
             android:textAllCaps="false"
             android:textAlignment="center"
             android:textSize="20dp"
@@ -105,7 +108,5 @@
 
 
     </RelativeLayout>
-
-
 
 </androidx.cardview.widget.CardView>

@@ -36,23 +36,46 @@
             android:layout_marginLeft="5dp"
             />
 
+        <TextView
+            android:id="@+id/epd_medicine_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/epd_status"
+            android:text="Write Medicine :- "
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorAccent"
+            />
+
         <EditText
             android:id="@+id/epd_medicine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/epd_status"
+            android:layout_below="@+id/epd_medicine_display"
             android:textColorHint="@color/colorPrimary"
             android:hint="Medicine :- "
             android:textSize="16dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="2dp"
             android:layout_marginLeft="5dp"
             android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/epd_precaution_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/epd_medicine"
+            android:text="Write Precautions :- "
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/colorAccent"
             />
         <EditText
             android:id="@+id/epd_precautions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/epd_medicine"
+            android:layout_below="@+id/epd_precaution_display"
             android:textColorHint="@color/colorPrimary"
             android:hint="Precautions :- "
             android:textSize="16dp"
