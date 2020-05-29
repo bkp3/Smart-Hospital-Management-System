@@ -35,7 +35,7 @@
                     android:id="@+id/view_doctor_admin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="View Doctor"
+                    android:text="View/Edit Doctor"
                     android:textSize="25dp"
                     android:textColor="@android:color/holo_blue_dark"
                     android:layout_marginTop="10dp"

@@ -30,6 +30,13 @@ public class AdminManageDoctorActivity extends AppCompatActivity {
 
             }
         });
+        viewDoctortxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(AdminManageDoctorActivity.this, AdminViewDoctorActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
