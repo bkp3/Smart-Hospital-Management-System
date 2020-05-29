@@ -38,22 +38,13 @@
             android:id="@+id/view_appointment_patient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Appointment"
+            android:text="View/Edit Appointment"
             android:textSize="25dp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_marginTop="20dp"
             android:textStyle="bold"
             android:gravity="center"/>
-        <TextView
-            android:id="@+id/view_profile_patient"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Profile"
-            android:textSize="25dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textStyle="bold"
-            android:gravity="center"/>
+
         <TextView
             android:id="@+id/view_prescription_patient"
             android:layout_width="match_parent"
@@ -69,6 +60,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Bill"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/view_profile_patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View/Edit Profile"
             android:textSize="25dp"
             android:layout_marginTop="20dp"
             android:textColor="@android:color/holo_blue_dark"

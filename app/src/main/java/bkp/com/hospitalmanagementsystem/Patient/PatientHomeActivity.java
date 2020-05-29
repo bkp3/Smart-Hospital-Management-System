@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class PatientHomeActivity extends AppCompatActivity {
 
-    private TextView newAppointmentTxt, viewAppointmentTxt, viewProfileTxt, namePatientTxt;
+    private TextView newAppointmentTxt, viewAppointmentTxt,viewPrescriptionTxt,viewBillTxt, viewProfileTxt, namePatientTxt;
     private Button logoutPatientBtn;
 
     @Override
@@ -27,6 +27,8 @@ public class PatientHomeActivity extends AppCompatActivity {
         namePatientTxt = findViewById(R.id.display_name_patient);
         newAppointmentTxt = findViewById(R.id.new_appointment_patient);
         viewAppointmentTxt = findViewById(R.id.view_appointment_patient);
+        viewPrescriptionTxt = findViewById(R.id.view_prescription_patient);
+        viewBillTxt = findViewById(R.id.view_bill_patient);
         viewProfileTxt = findViewById(R.id.view_profile_patient);
         logoutPatientBtn = findViewById(R.id.logout_patient);
 
@@ -45,6 +47,24 @@ public class PatientHomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PatientHomeActivity.this, ViewAppointmentPatientActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        viewPrescriptionTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PatientHomeActivity.this, ViewPrescriptionPatientActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        viewBillTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PatientHomeActivity.this, ViewBillPatientActivity.class);
                 startActivity(intent);
 
             }
