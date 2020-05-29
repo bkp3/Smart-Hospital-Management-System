@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/admin_receptionist_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone number :- "
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/admin_receptionist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_receptionist_phone"
+            android:text="Name :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/admin_receptionist_qualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_receptionist_name"
+            android:text="Qualification :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/admin_receptionist_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_receptionist_qualification"
+            android:text="Email :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/admin_receptionist_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_receptionist_email"
+            android:text="Password :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:id="@+id/admin_receptionist_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/admin_receptionist_password"
+            android:text="Address :- "
+            android:textSize="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

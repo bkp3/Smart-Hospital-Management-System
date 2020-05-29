@@ -26,5 +26,12 @@ public class AdminManageReceptionistActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        viewReceptionisttxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminManageReceptionistActivity.this,AdminViewReceptionistActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

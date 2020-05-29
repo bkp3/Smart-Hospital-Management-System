@@ -65,7 +65,7 @@
             android:id="@+id/edit_profile_receptionist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit Profile"
+            android:text="View/Edit Profile"
             android:textSize="25dp"
             android:textColor="@android:color/holo_blue_dark"
             android:textStyle="bold"

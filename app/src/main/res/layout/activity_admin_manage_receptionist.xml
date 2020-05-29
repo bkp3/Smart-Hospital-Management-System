@@ -35,7 +35,7 @@
             android:id="@+id/view_receptionist_admin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Receptionist"
+            android:text="View/Edit Receptionist"
             android:textSize="25dp"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_marginTop="10dp"

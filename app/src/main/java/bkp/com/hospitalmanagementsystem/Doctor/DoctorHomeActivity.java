@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class DoctorHomeActivity extends AppCompatActivity {
 
-    private TextView viewAppointmentTxt, viewPrescriptionTxt, nameDoctorTxt;
+    private TextView viewAppointmentTxt, viewPrescriptionTxt,editProfileTxt, nameDoctorTxt;
     private Button logoutDoctorBtn;
 
 
@@ -34,6 +34,7 @@ public class DoctorHomeActivity extends AppCompatActivity {
         nameDoctorTxt = findViewById(R.id.name_doctor);
         viewAppointmentTxt = findViewById(R.id.view_appointment_doctor);
         viewPrescriptionTxt = findViewById(R.id.view_prescription_doctor);
+        editProfileTxt = findViewById(R.id.edit_profile_doctor);
         logoutDoctorBtn = findViewById(R.id.logout_doctor);
 
         nameDoctorTxt.setText(PrevalentDoctor.currentOnlineDoctor.getName());
@@ -50,6 +51,13 @@ public class DoctorHomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DoctorHomeActivity.this, ViewPrescriptionDoctorActivity.class);
+                startActivity(intent);
+            }
+        });
+        editProfileTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DoctorHomeActivity.this, ViewProfileDoctorActivity.class);
                 startActivity(intent);
             }
         });
