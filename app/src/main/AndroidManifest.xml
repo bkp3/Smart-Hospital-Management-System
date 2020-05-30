@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/poster"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Receptionist.ViewProfileReceptionistActivity"></activity>
+        <activity android:name=".Patient.ViewProfilePatientActivity"></activity>
+        <activity android:name=".Receptionist.ViewProfileReceptionistActivity" />
         <activity android:name=".Doctor.ViewProfileDoctorActivity" />
         <activity android:name=".Admin.ManageReceptionist.AdminEditReceptionistActivity" />
         <activity android:name=".Admin.ManageReceptionist.AdminViewReceptionistActivity" />

@@ -9,14 +9,14 @@
     android:layout_marginEnd="15dp"
     android:layout_marginBottom="10dp"
     app:cardElevation="15dp"
-    tools:context=".Receptionist.ViewProfileReceptionistActivity">
+    tools:context=".Patient.ViewProfilePatientActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/vpr_phone"
+            android:id="@+id/vpp_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorPrimary"
@@ -27,10 +27,10 @@
             android:textColor="@color/colorPrimaryDark"
             />
         <EditText
-            android:id="@+id/vpr_name"
+            android:id="@+id/vpp_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/vpr_phone"
+            android:layout_below="@+id/vpp_phone"
             android:textColorHint="@color/colorPrimary"
             android:hint="Name :- "
             android:textSize="16dp"
@@ -39,10 +39,10 @@
             android:textColor="@color/colorPrimaryDark"
             />
         <EditText
-            android:id="@+id/vpr_email"
+            android:id="@+id/vpp_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/vpr_name"
+            android:layout_below="@+id/vpp_name"
             android:textColorHint="@color/colorPrimary"
             android:hint="Email :- "
             android:textSize="16dp"
@@ -50,23 +50,12 @@
             android:layout_marginLeft="5dp"
             android:textColor="@color/colorPrimaryDark"
             />
+
         <EditText
-            android:id="@+id/vpr_qualification"
+            android:id="@+id/vpp_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/vpr_email"
-            android:textColorHint="@color/colorPrimary"
-            android:hint="Qualification :- "
-            android:textSize="16dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/colorPrimaryDark"
-            />
-        <EditText
-            android:id="@+id/vpr_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/vpr_qualification"
+            android:layout_below="@+id/vpp_email"
             android:textColorHint="@color/colorPrimary"
             android:hint="Password :- "
             android:textSize="16dp"
@@ -74,26 +63,11 @@
             android:layout_marginLeft="5dp"
             android:textColor="@color/colorPrimaryDark"
             />
-        <EditText
-            android:id="@+id/vpr_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/vpr_password"
-            android:textColorHint="@color/colorPrimary"
-            android:hint="Address :- "
-            android:textSize="16dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/colorPrimaryDark"
-            />
-
-
-
         <Button
-            android:id="@+id/vpr_submit"
+            android:id="@+id/vpp_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/vpr_address"
+            android:layout_below="@+id/vpp_password"
             android:text="Update"
             android:textAllCaps="false"
             android:textAlignment="center"
@@ -108,13 +82,6 @@
             />
 
 
-
-
-
     </RelativeLayout>
-
-
-
-
 
 </androidx.cardview.widget.CardView>

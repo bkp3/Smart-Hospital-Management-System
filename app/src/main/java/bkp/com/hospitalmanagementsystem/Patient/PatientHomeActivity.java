@@ -69,6 +69,13 @@ public class PatientHomeActivity extends AppCompatActivity {
 
             }
         });
+        viewProfileTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PatientHomeActivity.this, ViewProfilePatientActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

@@ -1,11 +1,12 @@
-package bkp.com.hospitalmanagementsystem.Doctor;
+package bkp.com.hospitalmanagementsystem.Patient;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import bkp.com.hospitalmanagementsystem.Admin.ManageDoctor.AdminEditDoctorActivity;
-import bkp.com.hospitalmanagementsystem.Admin.ManageDoctor.AdminViewDoctorActivity;
-import bkp.com.hospitalmanagementsystem.PrevalentDoctor.PrevalentDoctor;
+import bkp.com.hospitalmanagementsystem.PrevalentPatient.PrevalentPatient;
+import bkp.com.hospitalmanagementsystem.PrevalentReceptionist.PrevalentReceptionist;
 import bkp.com.hospitalmanagementsystem.R;
+import bkp.com.hospitalmanagementsystem.Receptionist.ReceptionistHomeActivity;
+import bkp.com.hospitalmanagementsystem.Receptionist.ViewProfileReceptionistActivity;
 import io.paperdb.Paper;
 
 import android.content.Intent;
@@ -25,31 +26,29 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
-public class ViewProfileDoctorActivity extends AppCompatActivity {
+public class ViewProfilePatientActivity extends AppCompatActivity {
 
-    private EditText edtPhone, edtName,edtEmail,edtQualification,edtPassword,edtAddress;
+    private EditText edtPhone, edtName, edtEmail, edtPassword;
     private Button submitBtn;
 
     private String phoneID = "";
-    private DatabaseReference DoctorRef;
+    private DatabaseReference PatientRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_profile_doctor);
+        setContentView(R.layout.activity_view_profile_patient);
 
         Paper.init(this);
 
-        phoneID = PrevalentDoctor.currentOnlineDoctor.getMobile();
-        DoctorRef = FirebaseDatabase.getInstance().getReference().child("DoctorInfo").child(phoneID);
+        phoneID = PrevalentPatient.currentOnlinePatient.getMobile();
+        PatientRef = FirebaseDatabase.getInstance().getReference().child("PatientInfo").child(phoneID);
 
-        edtPhone = findViewById(R.id.vpd_phone);
-        edtName = findViewById(R.id.vpd_name);
-        edtEmail = findViewById(R.id.vpd_email);
-        edtQualification = findViewById(R.id.vpd_qualification);
-        edtPassword = findViewById(R.id.vpd_password);
-        edtAddress = findViewById(R.id.vpd_address);
-        submitBtn = findViewById(R.id.vpd_submit);
+        edtPhone = findViewById(R.id.vpp_phone);
+        edtName = findViewById(R.id.vpp_name);
+        edtEmail = findViewById(R.id.vpp_email);
+        edtPassword = findViewById(R.id.vpp_password);
+        submitBtn = findViewById(R.id.vpp_submit);
 
         displaySpecificAppointmentInfo();
 
@@ -66,40 +65,32 @@ public class ViewProfileDoctorActivity extends AppCompatActivity {
         String aPhone = edtPhone.getText().toString();
         String aName = edtName.getText().toString();
         String aEmail = edtEmail.getText().toString();
-        String aQaulification = edtQualification.getText().toString();
         String aPassword = edtPassword.getText().toString();
-        String aAddress = edtAddress.getText().toString();
 
-        if(aPhone.equals("")){
+        if (aPhone.equals("")) {
             Toast.makeText(this, "fill phone.", Toast.LENGTH_SHORT).show();
-        }else if(aName.equals("")){
+        } else if (aName.equals("")) {
             Toast.makeText(this, "fill name", Toast.LENGTH_SHORT).show();
-        }else if(aEmail.equals("")){
+        } else if (aEmail.equals("")) {
             Toast.makeText(this, "fill email", Toast.LENGTH_SHORT).show();
-        }else if(aQaulification.equals("")){
-            Toast.makeText(this, "fill qualification", Toast.LENGTH_SHORT).show();
-        }else if(aPassword.equals("")){
+        } else if (aPassword.equals("")) {
             Toast.makeText(this, "fill password", Toast.LENGTH_SHORT).show();
-        }else if(aAddress.equals("")){
-            Toast.makeText(this, "fill address", Toast.LENGTH_SHORT).show();
-        }else{
+        } else {
 
             HashMap<String, Object> mp = new HashMap<>();
-            mp.put("mobile",phoneID);
-            mp.put("name",aName);
-            mp.put("email",aEmail);
-            mp.put("qualification",aQaulification);
-            mp.put("password",aPassword);
-            mp.put("hospitalAddress",aAddress);
+            mp.put("mobile", phoneID);
+            mp.put("name", aName);
+            mp.put("email", aEmail);
+            mp.put("password", aPassword);
 
 
-            DoctorRef.updateChildren(mp).addOnCompleteListener(new OnCompleteListener<Void>() {
+            PatientRef.updateChildren(mp).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful()){
+                    if (task.isSuccessful()) {
 
-                        Toast.makeText(ViewProfileDoctorActivity.this, "update successfully.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(ViewProfileDoctorActivity.this, DoctorHomeActivity.class);
+                        Toast.makeText(ViewProfilePatientActivity.this, "update successfully.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ViewProfilePatientActivity.this, PatientHomeActivity.class);
                         startActivity(intent);
                         finish();
 
@@ -110,31 +101,26 @@ public class ViewProfileDoctorActivity extends AppCompatActivity {
 
         }
 
-
     }
+
 
     private void displaySpecificAppointmentInfo() {
 
-        DoctorRef.addValueEventListener(new ValueEventListener() {
+        PatientRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot.exists()){
+                if (dataSnapshot.exists()) {
 
                     String aPhone = dataSnapshot.child("mobile").getValue().toString();
                     String aName = dataSnapshot.child("name").getValue().toString();
                     String aEmail = dataSnapshot.child("email").getValue().toString();
-                    String aQualification = dataSnapshot.child("qualification").getValue().toString();
                     String aPassword = dataSnapshot.child("password").getValue().toString();
-                    String aAddress = dataSnapshot.child("hospitalAddress").getValue().toString();
 
                     edtPhone.setText(aPhone);
                     edtName.setText(aName);
                     edtEmail.setText(aEmail);
-                    edtQualification.setText(aQualification);
                     edtPassword.setText(aPassword);
-                    edtAddress.setText(aAddress);
-
                 }
 
             }
